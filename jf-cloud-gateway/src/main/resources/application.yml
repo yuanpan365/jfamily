@@ -1,0 +1,29 @@
+eureka:
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health
+  client:
+    serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: jf-system
+        uri: lb://jf-system
+        predicates:
+        - Path=/api/system/**
+        filters:
+        - StripPrefix=2
+#      discovery:
+#        locator:
+#        #是否与服务发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为false，设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能。
+#          enabled: true
+  application:
+    name: jf-cloud-gateway
+server:
+  port: 9002
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
