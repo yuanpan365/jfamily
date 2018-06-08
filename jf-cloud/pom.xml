@@ -9,7 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jf-cloud-zipkin</artifactId>
+    <artifactId>jf-cloud</artifactId>
+    <packaging>pom</packaging>
 
+    <modules>
+        <module>jf-cloud-config</module>
+        <module>jf-cloud-eureka</module>
+        <module>jf-cloud-gateway</module>
+        <module>jf-cloud-monitor</module>
+        <module>jf-cloud-zipkin</module>
+    </modules>
 
 </project>

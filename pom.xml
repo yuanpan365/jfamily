@@ -9,12 +9,8 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>jf-cloud-config</module>
-        <module>jf-cloud-eureka</module>
-        <module>jf-cloud-monitor</module>
-        <module>jf-cloud-zipkin</module>
+        <module>jf-cloud</module>
         <module>jf-system</module>
-        <module>jf-cloud-gateway</module>
         <module>jf-common</module>
         <module>jf-security</module>
     </modules>

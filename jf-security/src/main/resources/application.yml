@@ -1,0 +1,18 @@
+server:
+  port: 8089
+
+jf:
+  security:
+    token:
+      expiration-time: 10 # 分钟 1440
+      refresh-exp-time: 30 # 分钟 2880
+      issuer: http://xxxxxxxxxx
+      signing-key: jfamily
+
+
+spring:
+  application:
+    name: jf-security
+
+
+
